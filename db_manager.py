@@ -19,13 +19,10 @@ class DatabaseManager(object):
     def insert_new_case_data(self, case_list):
         # inserts a new row using a list of case data
         # to use, call with obj.insert_new_case_data(case_list)
-        self.query(
-            '''
-            INSERT INTO CaseData
-            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
-            ''',
-            case_list
-        )
+        sql = """ INSERT INTO CaseData
+                  VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) """
+        self.cursor.execute(sql, case_list) # self.query doesn't work here
+        self.connection.commit()
 
     def amend_case_data(self, case_list, index):
         table_names = self.get_table_names()
@@ -38,7 +35,8 @@ class DatabaseManager(object):
         # deletes a row with matching case number
         # to use, call with obj.delete_case_data(case_number)
         sql = ''' DELETE FROM CaseData WHERE CaseNumber = ? '''
-        self.cursor.execute(sql, (case_number,))
+        self.cursor.execute(sql, (case_number,)) # self.query doesn't work here
+        self.connection.commit()
 
     def get_table_names(self):
         return [description[0] for description in self.cursor.description]
