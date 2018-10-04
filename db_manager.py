@@ -22,7 +22,7 @@ class DatabaseManager(object):
         self.cursor.execute(
             '''
             INSERT INTO CaseData
-            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+            VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
             ''',
             case_list
         )
@@ -35,47 +35,61 @@ class DatabaseManager(object):
         self.cursor.execute(sql, (case_number,))
 
 
-    def table_creation(self):
+    def create_table(self, table_name):
         # Creates table for basic case data // as of 10-04-2018
-        try:
-            self.cursor.execute(
-                'CREATE TABLE CaseData ('
-                    'CaseNumber INTEGER PRIMARY KEY,'
-                    'Respondent TEXT,'
-                    'Project TEXT,'
-                    'RespAddress TEXT,'
-                    'RespContact TEXT,'
-                    'RespCity TEXT,'
-                    'RespState TEXT,'
-                    'RespZip INTEGER,'
-                    'RespEmail TEXT,'
-                    'CompTitle TEXT,'
-                    'CompFirst TEXT,'
-                    'CompLast TEXT,'
-                    'CompAddress TEXT,'
-                    'CompCity TEXT,'
-                    'CompState TEXT,'
-                    'CompZip INTEGER,'
-                    'CompEmail TEXT'
-                ')'
-            )
-        except sqlite3.OperationalError as e:
-            print e, " ... skipping creation"
+        if table_name == "CaseData":
+            try:
+                self.cursor.execute(
+                    'CREATE TABLE CaseData ('
+                        'CaseNumber INTEGER PRIMARY KEY,'
+                        'Respondent TEXT,'
+                        'Project TEXT,'
+                        'RespAddress TEXT,'
+                        'RespContact TEXT,'
+                        'RespCity TEXT,'
+                        'RespState TEXT,'
+                        'RespZip INTEGER,'
+                        'RespEmail TEXT,'
+                        'CompName TEXT,'
+                        'CompTitle TEXT,'
+                        'CompFirst TEXT,'
+                        'CompLast TEXT,'
+                        'CompAddress TEXT,'
+                        'CompCity TEXT,'
+                        'CompState TEXT,'
+                        'CompZip INTEGER,'
+                        'CompEmail TEXT'
+                    ')'
+                )
+                print "Table %s created!" % table_name
+            except sqlite3.OperationalError as e:
+                print e, " ... skipping creation"
 
         # Creates table for important dates // as of 10-04-2018
+        if table_name == "ImportantDates":
+            try:
+                self.cursor.execute(
+                    'CREATE TABLE ImportantDates ('
+                        'CaseNumber INTEGER PRIMARY KEY,'
+                        'ACKCDueDate TEXT,'
+                        'CCCLReqEvDueDate TEXT,'
+                        'ALGLDueDate TEXT,'
+                        'WLDueDate TEXT,'
+                        'DateOfACKC TEXT,'
+                        'DateOfCTC TEXT,'
+                        'DateOfCCCL TEXT,'
+                        'DateOfWL TEXT'
+                    ')'
+                )
+                print "Table %s created!" % table_name
+            except sqlite3.OperationalError as e:
+                print e, " ... skipping creation"
+
+    def drop_table(self, table_name):
+        # drops specified table
         try:
-            self.cursor.execute(
-                'CREATE TABLE ImportantDates ('
-                    'CaseNumber INTEGER PRIMARY KEY,'
-                    'ACKCDueDate TEXT,'
-                    'CCCLReqEvDueDate TEXT,'
-                    'ALGLDueDate TEXT,'
-                    'WLDueDate TEXT,'
-                    'DateOfACKC TEXT,'
-                    'DateOfCTC TEXT,'
-                    'DateOfCCCL TEXT,'
-                    'DateOfWL TEXT'
-                ')'
-            )
+            sql = 'DROP TABLE %s' % table_name
+            self.cursor.execute(sql)
+            print "Table %s dropped!" % table_name
         except sqlite3.OperationalError as e:
-            print e, " ... skipping creation"
+            print e, " ... can't delete"
