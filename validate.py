@@ -88,4 +88,7 @@ def menu_choice(prompt, acceptable):
     while response not in acceptable or response is "":
         print "\nThat's not an acceptable response. Please try again. "
         response = raw_input("\n" + prompt + "\n> ")
-    return response
+    if response.isdigit():
+        return int(response)
+    else:
+        return response

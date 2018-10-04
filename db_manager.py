@@ -28,12 +28,21 @@ class DatabaseManager(object):
         )
         self.connection.commit()
 
+    def amend_case_data(self, case_list, index):
+        table_names = self.get_table_names()
+        sql = "UPDATE CaseData SET %s = '%s' WHERE %s = %s" % (
+            table_names[index], case_list[index], "CaseNumber", case_list[0]
+        )
+        self.query(sql)
+
     def delete_case_data(self, case_number):
         # deletes a row with matching case number
         # to use, call with obj.delete_case_data(case_number)
         sql = ''' DELETE FROM CaseData WHERE CaseNumber = ? '''
         self.cursor.execute(sql, (case_number,))
 
+    def get_table_names(self):
+        return [description[0] for description in self.cursor.description]
 
     def create_table(self, table_name):
         # Creates table for basic case data // as of 10-04-2018
