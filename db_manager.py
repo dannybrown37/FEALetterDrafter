@@ -19,14 +19,13 @@ class DatabaseManager(object):
     def insert_new_case_data(self, case_list):
         # inserts a new row using a list of case data
         # to use, call with obj.insert_new_case_data(case_list)
-        self.cursor.execute(
+        self.query(
             '''
             INSERT INTO CaseData
             VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
             ''',
             case_list
         )
-        self.connection.commit()
 
     def amend_case_data(self, case_list, index):
         table_names = self.get_table_names()
