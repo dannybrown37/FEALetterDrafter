@@ -1,6 +1,6 @@
 import sqlite3
 from nameparser import HumanName
-from validate import (
+from functions.validate import (
     get_string,
     get_case_number,
     zip_find,
@@ -39,10 +39,10 @@ class CaseDataManager(object):
     def update_case_data(self):
         # allows user the chance to update selected case data
         # called by __init__ if case number is exisiting in database
-        table_names = self.dbm.get_table_names()
+        column_names = self.dbm.get_column_names()
         while True:
             print "\n 0. Nothing more to update!"
-            self.print_case_data(table_names)
+            self.print_case_data(column_names)
             prompt = "Please select a line to update (or 0 if you're done)."
             line = menu_choice(prompt, str(range(len(self.case_list)+1)))
             if line is 0:

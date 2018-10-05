@@ -1,7 +1,8 @@
 import sqlite3
-from db_manager import DatabaseManager
-from case_data_manager import CaseDataManager
-from validate import get_case_number
+from classes.db_manager import DatabaseManager
+from classes.case_data_manager import CaseDataManager
+from classes.correspondence_manager import CorrespondenceManager
+
 
 dummy = [2018021031, "RESP", "PROJ", "RESPADDRESS", "RESPCONTACT", "RESPCITY",
         "RESPSTATE", 32048, "RESPEMAIL", "COMPNAME", "COMPTITLE", "COMPFIRST",
@@ -9,8 +10,8 @@ dummy = [2018021031, "RESP", "PROJ", "RESPADDRESS", "RESPCONTACT", "RESPCITY",
 
 def main():
     dbm = DatabaseManager("fea_case_data.db")
-    cd = CaseDataManager(dbm)
-
+    cdm = CaseDataManager(dbm)
+    cor = CorrespondenceManager(dbm, cdm)
 
 
 
@@ -25,8 +26,11 @@ if __name__ == '__main__':
 
 dbm.insert_new_case_data(dummy)
 dbm.delete_case_data(2018021031)
-dbm.create_table("CaseData")
 dbm.drop_table("CaseData")
+dbm.create_table("CaseData")
+dbm.drop_table("LetterTypes")
+dbm.create_table("LetterTypes")
+
 
 results = dbm.query('select * from casedata where CaseNumber = 2018021031')
 for result in results:

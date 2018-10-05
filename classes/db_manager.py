@@ -25,9 +25,9 @@ class DatabaseManager(object):
         self.connection.commit()
 
     def amend_case_data(self, case_list, index):
-        table_names = self.get_table_names()
+        column_names = self.get_column_names()
         sql = "UPDATE CaseData SET %s = '%s' WHERE %s = %s" % (
-            table_names[index], case_list[index], "CaseNumber", case_list[0]
+            column_names[index], case_list[index], "CaseNumber", case_list[0]
         )
         self.query(sql)
 
@@ -38,7 +38,7 @@ class DatabaseManager(object):
         self.cursor.execute(sql, (case_number,)) # self.query doesn't work here
         self.connection.commit()
 
-    def get_table_names(self):
+    def get_column_names(self):
         return [description[0] for description in self.cursor.description]
 
     def create_table(self, table_name):
@@ -85,6 +85,33 @@ class DatabaseManager(object):
                         'DateOfCTC TEXT,'
                         'DateOfCCCL TEXT,'
                         'DateOfWL TEXT'
+                    ')'
+                )
+                print "Table %s created!" % table_name
+            except sqlite3.OperationalError as e:
+                print e, " ... skipping creation"
+
+        if table_name == "LetterTypes":
+            # This can be used to track the dates a letter was sent
+            try:
+                self.cursor.execute(
+                    'CREATE TABLE LetterTypes ('
+                        'CaseNumber INTEGER PRIMARY KEY,'
+                        'ACKC TEXT,'
+                        'ClosingNoContactACKC TEXT,'
+                        'CCCL TEXT,'
+                        'CCCLClosingNJ TEXT,'
+                        'CCCLClosingCCD TEXT,'
+                        'CCCLRequestingEvidence TEXT,'
+                        'ClosingLOD TEXT,'
+                        'Allegation TEXT,'
+                        'Information TEXT,'
+                        'Warning TEXT,'
+                        'WarningInformation TEXT,'
+                        'ClosingCompViolation TEXT,'
+                        'ClosingRespViolation TEXT,'
+                        'ClosingCompNoViolation TEXT,'
+                        'ClosingRespNoViolation TEXT'
                     ')'
                 )
                 print "Table %s created!" % table_name
