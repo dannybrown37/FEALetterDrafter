@@ -19,10 +19,32 @@ class DatabaseManager(object):
     def insert_new_case_data(self, case_list):
         # inserts a new row using a list of case data
         # to use, call with obj.insert_new_case_data(case_list)
+        case_number_in_list = [case_list[0]]
         sql = """ INSERT INTO CaseData
                   VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) """
         self.cursor.execute(sql, case_list) # self.query doesn't work here
+        sql = """ INSERT INTO ImportantDates
+                  VALUES (?, NULL, NULL, NULL, NULL, NULL) """
+        self.cursor.execute(sql, case_number_in_list)
+        sql = """ INSERT INTO LetterTypes
+                  VALUES (
+                      ? , NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+                      NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL
+                  ) """
+        self.cursor.execute(sql, case_number_in_list)
         self.connection.commit()
+
+    def query_important_date(self, date_type, case_number):
+        sql = "SELECT %s FROM ImportantDates WHERE CaseNumber = %s" % (
+            date_type, case_number
+        )
+        return self.query(sql)
+
+    def amend_important_date(self, column_name, date_of_ctc, case_number):
+        sql = "UPDATE ImportantDates SET %s = '%s' WHERE %s = %s" % (
+            column_name, date_of_ctc, "CaseNumber", case_number
+        )
+        self.query(sql)
 
     def amend_case_data(self, case_list, index):
         column_names = self.get_column_names()
