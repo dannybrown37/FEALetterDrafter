@@ -92,8 +92,8 @@ class CorrespondenceManager(object):
             print "\nYour %s has been generated!" % letter_type
 
 
-    def get_merge_field_data(self):  # Merge variable name:
-        # Just for clarity, let's assign variable names to our cdm.case_list
+    def get_merge_field_data(self):                     # Merge variable name:
+        # Assigning these for clarity only
         self.case_number = self.cdm.case_list[0]        # caseNumber
         self.respondent = self.cdm.case_list[1]         # respondent
         self.project = self.cdm.case_list[2]            # project
@@ -110,7 +110,7 @@ class CorrespondenceManager(object):
             self.cdm.case_list[10],
             self.cdm.case_list[12]
         )
-        self.comp_address = self.cdm.case_list[13]      # complainant
+        self.comp_address = self.cdm.case_list[13]      # compAddress
         self.comp_csz = "%s, %s %s" % (                 # compCityStateZip
             self.cdm.case_list[14],
             self.cdm.case_list[15],
@@ -204,7 +204,6 @@ class CorrespondenceManager(object):
     def get_merge_fields_from_selected_letters(self):
         master_list = []
         for n in self.letter_type_names:
-            print n
             for file_name in glob.glob("letter_templates/%s_Template.docx" % n):
                 with MailMerge(file_name) as document:
                     merge_fields = list(document.get_merge_fields())
@@ -213,11 +212,10 @@ class CorrespondenceManager(object):
                             master_list.append(mf)
         return master_list
 
-
     def get_merge_fields_from_all_letters(self):
         # This was just a helper function to get a list of all merge fields
         # Will be useful again should major revisions or additions happen with
-        # letters.
+        # letters. It could be combined with the above but whatever.
         master_list = []
         for file_name in glob.glob("letter_templates/*.docx"):
             with MailMerge(file_name) as document:

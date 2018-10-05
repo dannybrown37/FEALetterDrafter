@@ -4,18 +4,10 @@ from classes.case_data_manager import CaseDataManager
 from classes.correspondence_manager import CorrespondenceManager
 
 
-
-
 def main():
     dbm = DatabaseManager("fea_case_data.db")
     cdm = CaseDataManager(dbm)
     cor = CorrespondenceManager(dbm, cdm)
-
-
-
-
-
-
 
 if __name__ == '__main__':
     main()

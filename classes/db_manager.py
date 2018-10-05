@@ -35,14 +35,16 @@ class DatabaseManager(object):
         self.connection.commit()
 
     def query_important_date(self, date_type, case_number):
+        # returns a specific date from a specific case as specified
         sql = "SELECT %s FROM ImportantDates WHERE CaseNumber = %s" % (
             date_type, case_number
         )
         return self.query(sql)
 
-    def amend_important_date(self, column_name, date_of_ctc, case_number):
+    def amend_important_date(self, column_name, date, case_number):
+        # saves a specific
         sql = "UPDATE ImportantDates SET %s = '%s' WHERE %s = %s" % (
-            column_name, date_of_ctc, "CaseNumber", case_number
+            column_name, date, "CaseNumber", case_number
         )
         self.query(sql)
 
@@ -62,6 +64,15 @@ class DatabaseManager(object):
 
     def get_column_names(self):
         return [description[0] for description in self.cursor.description]
+
+    def drop_table(self, table_name):
+        # drops specified table
+        try:
+            sql = 'DROP TABLE %s' % table_name
+            self.cursor.execute(sql)
+            print "Table %s dropped!" % table_name
+        except sqlite3.OperationalError as e:
+            print e, " ... can't delete"
 
     def create_table(self, table_name):
         # Creates table for basic case data // as of 10-04-2018
@@ -144,12 +155,3 @@ class DatabaseManager(object):
                 print "Table %s created!" % table_name
             except sqlite3.OperationalError as e:
                 print e, " ... skipping creation"
-
-    def drop_table(self, table_name):
-        # drops specified table
-        try:
-            sql = 'DROP TABLE %s' % table_name
-            self.cursor.execute(sql)
-            print "Table %s dropped!" % table_name
-        except sqlite3.OperationalError as e:
-            print e, " ... can't delete"
