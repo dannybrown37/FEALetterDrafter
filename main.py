@@ -26,11 +26,13 @@ if __name__ == '__main__':
 
 dbm.insert_new_case_data(dummy)
 dbm.delete_case_data(2018021031)
+
 dbm.drop_table("CaseData")
 dbm.create_table("CaseData")
 dbm.drop_table("LetterTypes")
 dbm.create_table("LetterTypes")
-
+dbm.drop_table("ImportantDates")
+dbm.create_table("ImportantDates")
 
 results = dbm.query('select * from casedata where CaseNumber = 2018021031')
 for result in results:

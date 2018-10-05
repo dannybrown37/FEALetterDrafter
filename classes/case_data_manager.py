@@ -34,7 +34,8 @@ class CaseDataManager(object):
         # prints case data for active object
         # call using obj.print_case_data()
         for index, (type, item) in enumerate(zip(types, self.case_list)):
-            print str(index+1).rjust(2) + ". " + str(type) + ": " + str(item)
+            print str(index+1).rjust(2) + ". " +\
+                  str(type).rjust(11) + ": " + str(item)
 
     def update_case_data(self):
         # allows user the chance to update selected case data
