@@ -15,8 +15,9 @@ class CorrespondenceManager(object):
     def __init__(self, dbm, cdm):
         self.dbm = dbm
         self.cdm = cdm
+        self.dbm.query("SELECT * FROM CaseData") # needed for next line
         self.case_data_categories = self.dbm.get_column_names()
-        self.dbm.query("SELECT * FROM LetterTypes")
+        self.dbm.query("SELECT * FROM LetterTypes") # needed for next line
         self.letter_types = self.dbm.get_column_names()
         self.letter_types.pop(0) # remove the CaseNumber column
         self.to_gen = []
@@ -182,7 +183,7 @@ class CorrespondenceManager(object):
 
         # Info for respondent letters
         if "respSalutation" in self.merge_fields:
-            self.resp_saluation = get_respondent_salutation(self.resp_contact)
+            self.resp_salutation = get_respondent_salutation(self.resp_contact)
         else:
             self.resp_salutation = None
 

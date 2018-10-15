@@ -25,7 +25,7 @@ class CaseDataManager(object):
                 self.case_list.append(item)
         if len(self.case_list) is 0:
             self.case_list.append(int(self.case_number))
-            self.get_remaining_case_data(self.case_list)
+            self.get_remaining_case_data()
         else:
             print "\nFound the case!"
             self.update_case_data()
@@ -59,7 +59,7 @@ class CaseDataManager(object):
                 self.dbm.amend_case_data(self.case_list, line-1)
 
     # Called by __init__
-    def get_remaining_case_data(self, case_list):
+    def get_remaining_case_data(self):
             # START HELPER FUNCTIONS #
             # THESE FUNCTIONS CHECK FOR MATCHING EXISITING DATA FROM OTHER ROWS
         def check_for_respondent():
@@ -103,8 +103,9 @@ class CaseDataManager(object):
             self.case_list.append(get_string("Enter respondent address."))
             rc = get_string("Enter respondent contact with title.")
             self.case_list.append(rc)
-            zip = zip_find("respondent").replace(",", "").split(" ")
+            zip = zip_find("respondent").replace(",", "").rsplit(" ", 2)
             for z in zip:
+                print z
                 self.case_list.append(z) # city / state abbr / zip
             self.case_list.append(get_string("Enter respondent email."))
 
@@ -125,8 +126,9 @@ class CaseDataManager(object):
             self.case_list.append(human_name['first'])
             self.case_list.append(human_name['last'])
             self.case_list.append(get_string("Enter complainant address."))
-            zip = zip_find("complainant").replace(",", "").split(" ")
+            zip = zip_find("complainant").replace(",", "").rsplit(" ", 2)
             for z in zip:
+                print z
                 self.case_list.append(z) # city / state abbr / zip
             self.case_list.append(get_string("Enter complainant email."))
 
