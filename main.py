@@ -2,12 +2,19 @@ import sqlite3
 from classes.db_manager import DatabaseManager
 from classes.case_data_manager import CaseDataManager
 from classes.correspondence_manager import CorrespondenceManager
+from functions.validate import menu_choice
+from functions.query_case import query_case
 
 
 def main():
     dbm = DatabaseManager("fea_case_data.db")
-    cdm = CaseDataManager(dbm)
-    cor = CorrespondenceManager(dbm, cdm)
+    prompt = ("1. Query the database.\n2. Draft a letter.")
+    choice = menu_choice(prompt, "12")
+    if choice is 1:
+        query_case(dbm)
+    elif choice is 2:
+        cdm = CaseDataManager(dbm)
+        CorrespondenceManager(dbm, cdm)
 
 if __name__ == '__main__':
     main()

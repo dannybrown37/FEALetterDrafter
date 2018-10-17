@@ -40,6 +40,7 @@ class CaseDataManager(object):
     def update_case_data(self):
         # allows user the chance to update selected case data
         # called by __init__ if case number is exisiting in database
+        self.dbm.query("SELECT * FROM CaseData") # needed for next line
         column_names = self.dbm.get_column_names()
         while True:
             print "\n 0. Nothing more to update!"
@@ -135,6 +136,8 @@ class CaseDataManager(object):
         # Now save our data into our database!
         try:
             self.dbm.insert_new_case_data(self.case_list)
+            self.dbm.query("SELECT * FROM CaseData") # needed for next line
+            self.update_case_data()
         except sqlite3.IntegrityError as e:
             # this shouldn't actually be invoked, but just in case...
             print e, " ... case already exists!"

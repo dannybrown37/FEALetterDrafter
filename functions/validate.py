@@ -84,7 +84,7 @@ def zip_find(recipient_type):
 
 
 def menu_choice(prompt, acceptable):
-    response = raw_input("\n" + prompt + "\n> ")
+    response = raw_input("\nPlease make a selection:\n\n" + prompt + "\n> ")
     while response not in acceptable or response is "":
         print "\nThat's not an acceptable response. Please try again. "
         response = raw_input("\n" + prompt + "\n> ")
