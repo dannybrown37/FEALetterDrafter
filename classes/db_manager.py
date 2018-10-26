@@ -50,6 +50,8 @@ class DatabaseManager(object):
 
     def amend_case_data(self, case_list, index):
         column_names = self.get_column_names()
+        print column_names[index]
+        print case_list[index]
         sql = "UPDATE CaseData SET %s = '%s' WHERE %s = %s" % (
             column_names[index], case_list[index], "CaseNumber", case_list[0]
         )

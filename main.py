@@ -3,23 +3,25 @@ from classes.db_manager import DatabaseManager
 from classes.case_data_manager import CaseDataManager
 from classes.correspondence_manager import CorrespondenceManager
 from functions.validate import menu_choice
-from functions.query_case import query_case
+from functions.query_case import amend_table_data
 
 
 def main():
-    dbm = DatabaseManager("fea_case_data.db")
+    # Chooset the thing to do
     prompt = ("1. Draft a letter.\n"
               "2. Update case data.\n"
-              "3. Query the database.")
+              "3. Query and update the database.")
     choice = menu_choice(prompt, "123")
 
+    # Do the thing
+    dbm = DatabaseManager("fea_case_data.db")
     if choice is 1:
         cdm = CaseDataManager(dbm)
         CorrespondenceManager(dbm, cdm)
     elif choice is 2:
         CaseDataManager(dbm)
     elif choice is 3:
-        query_case(dbm)
+        amend_table_data(dbm)
 
 if __name__ == '__main__':
     main()
