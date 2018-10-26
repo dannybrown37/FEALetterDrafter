@@ -58,6 +58,7 @@ class CaseDataManager(object):
                 else:
                     self.case_list[line-1] = get_string(prompt)
                 self.dbm.amend_case_data(self.case_list, line-1)
+                self.dbm.query("SELECT * FROM CaseData") # needed for col names
 
     # Called by __init__
     def get_remaining_case_data(self):

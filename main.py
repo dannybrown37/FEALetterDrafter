@@ -8,13 +8,18 @@ from functions.query_case import query_case
 
 def main():
     dbm = DatabaseManager("fea_case_data.db")
-    prompt = ("1. Query the database.\n2. Draft a letter.")
-    choice = menu_choice(prompt, "12")
+    prompt = ("1. Draft a letter.\n"
+              "2. Update case data.\n"
+              "3. Query the database.")
+    choice = menu_choice(prompt, "123")
+
     if choice is 1:
-        query_case(dbm)
-    elif choice is 2:
         cdm = CaseDataManager(dbm)
         CorrespondenceManager(dbm, cdm)
+    elif choice is 2:
+        CaseDataManager(dbm)
+    elif choice is 3:
+        query_case(dbm)
 
 if __name__ == '__main__':
     main()
