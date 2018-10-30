@@ -11,15 +11,15 @@ def amend_table_data(dbm):
     for x in range(1, len(tables)+1):
         print str(x) + ". " + tables[x-1]
     table = menu_choice(prompt, str(range(len(tables)+1)))
-    case_number = get_case_number()
 
     if tables[table-1] == "AppraiserSites":
         results = dbm.query("SELECT * FROM AppraiserSites")
         for result in results:
-            print result
+            print result[0], "|", result[1]
         # TODO add ability to edit these if ever needed
-        return # just breaks from function
+        return # breaks from function before below
 
+    case_number = get_case_number()
     while True:
         sql = "SELECT * FROM %s WHERE CaseNumber = %s " % (
             tables[table-1],

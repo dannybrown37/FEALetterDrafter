@@ -13,7 +13,7 @@ def main():
         # Chooseth the thing to doeth
         prompt = ("1. Draft a letter.\n"
                   "2. Update case data.\n"
-                  "3. Query and update the database.\n"
+                  "3. Query and update any table in the database.\n"
                   "4. Get assistance with an initial review.\n"
                   "5. Create an AEO.\n"
                   "Q. (Exit the program.)")

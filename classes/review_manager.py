@@ -1,6 +1,9 @@
 from .aeo_manager import AEOManager
+import os
 import webbrowser as wb
 import uszipcode
+import subprocess
+from shutil import copy2
 from uszipcode import SearchEngine
 from functions.validate import get_string, get_bool, get_integer
 
@@ -13,6 +16,13 @@ class ReviewManager(object):
         self.get_fees_info()
         self.get_ownership_info()
         self.generate_summary()
+        AEOManager(self.cdm.case_list)
+        checklist_pdf = 'checklists/2018 Case Opening Checklist.pdf'
+        copy = 'checklists/%s Case Opening Checklist.pdf' % cdm.case_list[0]
+        copy2(checklist_pdf, copy)
+        subprocess.Popen([copy], shell=True)
+        # TODO add dialogue box on where to save? Figure out how to handle these
+
 
     def get_corporate_info(self):
         print "Corporation:", self.cdm.case_list[1]
@@ -26,7 +36,7 @@ class ReviewManager(object):
         vr = "http://vr:9029/le5/faces/jsp/VrDashboard.jsp"
         wb.open_new_tab(vr)
         self.num_of_units = get_integer("What is the number of units?")
-        self.fees_paid = get_bool("Are all due fees paid?")
+        self.fees_paid = get_bool("Are all fees that are due paid?")
         self.fees_paid = "paid" if self.fees_paid is True else "not paid"
 
     def get_ownership_info(self):

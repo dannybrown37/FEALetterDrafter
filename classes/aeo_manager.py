@@ -4,11 +4,16 @@ from functions.validate import get_string, get_case_number
 
 
 class AEOManager(object):
-    def __init__(self):
+    def __init__(self, case_data=[]):
         # Get name of files and stripped allegation language from file names
         self.file_names = []
         self.allegations = []
         self.selections = []
+        self.case_data = case_data
+        if case_data:
+            print "\nAnd now for the AEO..." # greeting of sorts from review_manager
+            self.case_number = case_data[0]
+            self.project_name = case_data[1]
         for file_name in glob.glob("AEOs/*.txt"): # relative to main, not class
             self.file_names.append(file_name)
             allegation = file_name.replace("AEOs\\", "").replace(".txt", "")
@@ -17,6 +22,7 @@ class AEOManager(object):
         self.add_allegations()
         # Pull allegation language and stuff
         self.create_document()
+        # TODO add dialogue box to select where to save? Figure out how to handle
 
     def add_allegations(self, search=""):
         if self.selections:
@@ -54,12 +60,16 @@ class AEOManager(object):
             self.add_allegations()
 
     def create_document(self):
-        case_number = get_case_number()
-        project_name = get_string("Enter the respondent or project name.")
+        if not self.case_data:
+            self.case_number = get_case_number()
+            self.project_name = get_string("Enter the respondent or project.")
+
         # Creating our .docx file
         last = self.selections[len(self.selections)-1]
         document = docx.Document()
-        document.add_heading("AEO for " + case_number + ", " + project_name, 0)
+        document.add_heading(
+            "AEO: %s, %s" % (self.case_number, self.project_name), 0
+        )
         doc_data = []
         for num in self.selections:
             with open(self.file_names[num], "r") as f:
@@ -89,4 +99,4 @@ class AEOManager(object):
 
         doc_data = " ".join(doc_data)
 
-        document.save(" %s AEO %s.docx" % (doc_data, case_number))
+        document.save(" %s AEO %s.docx" % (doc_data, self.case_number))
