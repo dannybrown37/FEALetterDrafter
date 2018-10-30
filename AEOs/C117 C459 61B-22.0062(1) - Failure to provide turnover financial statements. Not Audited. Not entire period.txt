@@ -1,0 +1,16 @@
+C117 C459 61B-22.0062(1) Failure to provide turnover financial statements. Turnover financial statements not audited. Failure of turnover financial statements to cover entire period.
+
+Allegation:  Developer failed to turnover financial statement as required by section 718.304(4)(c), FS, and rule 61B-22.0062(1).
+
+Statute/Rule Reference:  Section 718.301(4)(c), FS, 61B-22.0062(1), FAC
+
+Elements:
+* When did turnover occur?
+* What occurrence triggered turnover?
+* Does the audit cover the period beginning with the date of incorporation, or from the end of the first period covered by the last audit if all fiscal periods have been audited, and ending with the date of transfer of association control to unit owners other than the developer? (Entire period) No.
+* Are the turnover financial statements audited?
+
+Evidence Needed:
+Turnover Audit
+Fiscal year audits
+Date of turnover

@@ -1,0 +1,19 @@
+C402 718.119(3) Failure to notify unit owners that legal action may exceed liability insurance
+
+Allegation:  The Respondent failed to notify unit owners that legal action may expose the association and unit owners to liability in excess of the association's insurance, in violation of section 718.119(3), Florida Statutes.
+
+Statute/Rule Reference:  Section 718.119(3), Florida Statutes
+
+Elements:
+
+Is the association involved in legal action?
+
+Does the association have liability insurance?
+
+What is the amount of the liability insurance?
+
+What is the amount listed in the legal action?
+
+Were unit owners informed of the legal action?
+
+Did the notice advise them that the amount of the legal action may exceed amount of the liability insurance?

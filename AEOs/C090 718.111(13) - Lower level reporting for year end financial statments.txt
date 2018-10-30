@@ -1,0 +1,20 @@
+C090 718.111(13) FS. Reporting
+
+Allegation 1: The association provided lower level of reporting for year-end financial statements than required in violation of Section 718.111(13) Florida Statute.
+
+Statute/Rule Reference:  718.111(13) FS.
+
+Elements:
+* Does the association have fewer than 75 units?  No. Has 168 Units.
+* Does the association make more than $100,000 but less than $200,000 in revenues? No.
+* Did the association prepare compiled financial statements?  No.
+* Did the association make more than $200,000 but less than $400,000 in revenues? No.
+* Did the association prepare reviewed financial statements?  No.
+* Did the association make more than $400,000 in revenues?
+* Did the association prepare audited financial statements?
+* Did the association vote to prepare for the current year lesser statements?
+
+Evidence:
+Financial Statements
+Budget
+Bank Records

@@ -1,0 +1,21 @@
+C138 - 61B-23.002(3) - Fire Sprinkler Retrofitting
+
+RULE LANGUAGE
+Each association that votes to forego retrofitting of the common elements or units of a residential condominium with a fire sprinkler system or other engineered life safety system or handrails or guardrails by the affirmative vote of two-thirds of all voting interests in the affected condominium, shall report the voting results and certification information for each affected condominium to the division on DBPR Form CO 6000-8, RETROFITTING REPORT FOR CONDOMINIUMS, incorporated herein by reference and effective 11-30-04. The form may be obtained by writing the division at 1940 North Monroe Street, Tallahassee, Florida 32399-1030. If retrofitting has been undertaken by a residential condominium, the association shall report the per-unit cost of such work to the division using DBPR Form CO 6000-8, RETROFITTING REPORT FOR CONDOMINIUMS. The division shall prepare separate reports of information obtained from associations relating to the waiver of a fire sprinkler system and the waiver of handrails and guardrails and deliver the reports to the Division of State Fire Marshal of the Department of Financial Services no later than August I of each year. DBPR Form CO 6000-8, RETROFI1TING REPORT FOR CONDOMINIUMS must be filed with the division within 60 days of recordation of the retrofitting waiver certificate in the public records where the condominium is located or upon commencement of the retrofitting project.
+
+ELEMENTS
+1. Did the association vote to forego retrofitting of the common elements or units in the condominium with a fire sprinkler system or other engineered life safety system or handrails or guardrails?
+2. If yes, was it by the affirmative vote of two-thirds of all voting interests in the affected condominium?
+3. If yes, did the association report the voting results and certification information for each affected condominium to the division on DBPR Form CO 6000-8, RETROFITTING REPORT FOR CONDOMINIUMS (effective 11-30-04)?
+4. Did the association file the retrofitting waiver certificate in the public records where the condominium is located?
+5. If no, why?
+6. Did the association file the form within 60 days of recordation of the retrofitting waiver certificate in the public records where the condominium is located?
+7. If no, why?
+OR 
+8. Did the association vote to retrofit the common elements or units in the condominium with a fire sprinkler system or other engineered life safety system or handrails or guardrails?
+9. If yes, did the association report the per-unit cost of such work to the division using DBPR Form CO 6000-8, RETROFITTING REPORT FOR CONDOMINIUMS (effective 11-30-04)?
+10. Did the association file the form within 60 days of commencement of the retrofitting project?
+11. If no, why?
+
+NOTES
+DBPR Form CO 6000-8, RETROFITTING REPORT FOR CONDOMINIUMS may be obtained by writing the division at 1940 North Monroe Street, Tallahassee, Florida 32399-1030. The division shall prepare separate reports of information obtained from associations relating to the waiver of a fire sprinkler system and the waiver of handrails and guardrails and deliver the reports to the Division of State Fire Marshal of the Department of Financial Services no later than August 1 of each year.

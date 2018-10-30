@@ -1,0 +1,19 @@
+C375 718.116(9) Guarantee not properly established
+
+Allegation:  Developer established a guarantee improperly without a unit owners vote.
+
+Statute/Rule Reference:  Section 718.116(9), FS, 61B-22.004(1), FAC
+
+Elements:
+* Was the guarantee originally stated in the Purchase Agreement, Prospectus or Declaration as initially filed with the Division?
+* Was the guarantee established by agreement?
+* Was there a vote with approval of the majority of the voting interest of the association other than the developer?
+* Was approval expressed at a meeting of unit owners?
+* Was the approval by agreement in writing, without a meeting, if the bylaw allows?
+* Does the guarantee meet the requirements of section 718.116(9), FS and rule 61B-22.004, FAC?
+
+Evidence Needed:
+Document that establishes the guarantee.
+Meeting minutes, as applicable.
+Written agreement, as applicable.
+Bollats and sign in sheet, as applicable.

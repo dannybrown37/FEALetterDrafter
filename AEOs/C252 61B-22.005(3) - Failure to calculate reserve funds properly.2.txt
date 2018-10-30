@@ -1,0 +1,16 @@
+C252 Section 718.112(2)(f)2, Failure to calculate reserve funds properly. 
+
+Allegation: Specifically, the complainant alleges that the prior year's under-funding is absorbed into the 2005 budget rather than amortizing over the remaining useful life 
+
+Statute/Rule Reference:  
+Section 718.112(2)(f)2, Florida Statutes
+Rule 61B-22.005(3), Florida Administrative Code
+
+Elements:  
+* Was a budget proposed?
+* Did the proposed budget contain reserve accounts for capital expenditures and deferred maintenance?
+* Did reserve schedule contain the estimated useful life, remaining useful life, estimated cost of capital expenditure/deferred maintenance, fund balance and the funding required for the proposed budget period?
+* Was the funding required for the proposed budget period calculated using the following:  the estimated deferred maintenance or capital expenditure less the estimated balance of the reserve account as of the beginning of the period for which the budget will be in effect.  The remainder to be divided by the remaining useful life of the asset.
+
+Evidence Needed:
+Proposed Budget

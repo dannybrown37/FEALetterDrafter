@@ -1,0 +1,20 @@
+C093 718.111(13) FS. Reporting
+
+Allegation 1: The association failed to prepare the annual financial report on a cash basis and/or failed to include in the annual financial report specified receipt or expenditure line items, or disclosures on limited common elements in violation of Section 718.111(13) Florida Statute.
+
+Statute/Rule Reference:  718.111(13) FS.
+
+Elements:
+* Does the association make less than $100,000 in revenues?
+* Does the association operate less than 50 units? 
+* Was a report of cash receipts and disbursements generated?
+* If created was any category left off?
+* Were reserves included?
+* Did the association elect to create financial statements instead?
+
+Evidence:
+Declaration of Condominium
+Financial Report
+Budget
+Bank Statements
+Billing Statements

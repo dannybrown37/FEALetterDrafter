@@ -1,0 +1,18 @@
+C117 C102 61B-22.0062(2)(d) Guarantee disclosures incomplete in, or missing from, turnover financial statements or year-end financial statements.
+
+Allegation:  Guarantee is not properly reflected in the financial records pursuant to section 718.116(9), FS.
+
+Statute/Rule Reference:  Rule 61B-22.006(3)(e) and rule 61B-22.0062(2)(d), FAC
+
+Elements:
+* Is the period of time covered by the guarantee included?
+* Are the amounts of common expenses incurred during the guarantee disclosed?
+* Is the amount of assessments charged to the non-developer units during the guarantee disclosed?
+* Do they contain the amount of non-assessment revenues earned by the association, with each non-assessment revenue generating activity disclosed separately, during the guarantee period?
+* Is the amount of Developer's payments pursuant to the guarantee included?
+* Is any financial obligation to/from developer as result of the guarantee disclosed?
+
+Evidence Needed:
+Financial Statements
+Applicable documents in which the guarantee is stated.  (Purchase Agreement, Prospectus or Declaration)  pursuant to section 718.116(9), FS).
+Accounting books and records.

@@ -1,0 +1,21 @@
+C606 718.618(2)(a) Failure to fund converter reserves in a timely manner
+
+Allegation:  Developer has been improperly funding converter reserves
+
+Statute/Rule Reference:  Section 718.618(2)(a), FS
+
+Elements:
+* Which reserves accounts are required?  
+* Were any warranties offered, if reserve account is not funded?
+* Was a surety bond posted?
+* What type of roof?  Was right numerator and denominator used?
+* Utilized the converter reserve worksheet (Excel document).
+* What reserves funded on a pro rata basis upon the sale of each unit.
+* How many sales have taken place.
+
+Evidence Needed:
+Conversion Report
+Budget
+Accounting records showing converter reserves fund balances
+Year end Audit
+Information on sales that have taken place.

@@ -1,0 +1,17 @@
+C099 61B-22.006(2), FAC. Reporting
+
+Allegation 1: The association failed to include one or more components of the year-end financial statements in violation of Rule 61B-22.006(2), Florida Administrative Code.  
+
+Statute/Rule Reference: 61B-22.006(2), FAC.
+
+Elements:
+* Have the financial statements been prepared?
+* Do the financial statements have an Accountant's or Auditor's Report?
+* Do the financial statements have a balance sheet?
+* Do the financial statements have a statement of revenues and expenses?
+* Do the financial statements have a statement of changes in fund balances?
+* Do the financial statements have a statement of cash flows?
+* Do the financial statements have notes to financial statements?
+
+Evidence:
+Financial Statements

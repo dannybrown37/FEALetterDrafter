@@ -1,0 +1,19 @@
+C603 718.618(1) Failure to calculate converter reserves properly
+
+Allegation:  Developer improperly calculated the converter reserves
+
+Statute/Rule Reference:  Section 718.618(1), FS, rule 61B-24.007, FAC
+
+Elements:
+* Which reserves accounts are required?  
+* Were any warranties offered, if reserve account is not funded?
+* Was a surety bond posted?
+* What type of roof?  Was right numerator and denominator used?
+* Plumbing reserve?  Was right numerator and denominator of 40 used?
+* Utilized the converter reserve worksheet (Excel document).
+
+Evidence Needed:
+Declaration
+Conversion Report
+Budget
+Accounting records showing converter reserves fund balances

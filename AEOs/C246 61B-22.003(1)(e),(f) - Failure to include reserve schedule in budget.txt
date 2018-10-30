@@ -1,0 +1,20 @@
+C246 61B-22.003(1)(e),(f), Association failed to include a reserve schedule in the proposed budget
+
+Allegation 1: The association failed to include a reserve schedule in the proposed budget in violation of 61B-22.003(1)(e),(f), Florida Administrative Code.
+
+Statute/Rule Reference: 61B-22.003(1)(e),(f), FAC.
+
+Elements:
+* Is there a reserve schedule?
+* Are the reserves pooled?
+* Does the Reserve schedule include the following?
+1. Total estimated life.
+2. Estimated remaining useful life of the asset.
+3. Estimated replacement cost or deferred maintenance expense of the asset.
+4. The estimated fund balance as of the beginning of the period for which the budget will be in effect. Or the estimated fund balance for the pooled reserve as of the beginning of the period for which the budget will be in effect.
+5. The developer's total funding obligation when all units are sold, for each converter reserve account established pursuant to Section 718.618, Florida statutes where Applicable.
+
+Evidence:
+Budget
+Bank Statements
+Financial Statements

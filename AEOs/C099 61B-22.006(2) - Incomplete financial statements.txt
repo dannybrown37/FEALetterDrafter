@@ -1,0 +1,38 @@
+C099 61B-22.006(2) Failure to include one or more components of the year-end financial statements (incomplete).
+
+Allegation:  The financial statements do not appear to be complete.
+
+Statute/Rule Reference:  Rule 61B-22.006(2), FAC
+
+Elements:
+* Check to see if each component is included:
+Accountant's or Auditor's report
+Balance Sheet
+Statement of Revenues and Expenses
+Statement of changes of fund balances
+Statement of cash flows; and
+Notes to the financial statement.
+* Is the Audit pursuant to sections 718.111(13) or 718.301(4). FS?
+* If a turnover audit, does it cover entire period?
+* Is the audit unqualified?
+* Are required disclosures for reserves included?
+Beginning balance in each reserve account
+Amount of assessments and additions to each reserve account
+Amount expended in each reserve account
+Ending balance in each reserve account
+Manner by which the reserves were estimated
+Date estimates last made and
+Policies for allocating reserve fund interest income.
+* Is the method by which assessments and expenses are allocated included?
+* If a guarantee, are the following included?
+Period of time for the guarantee
+Amount of common expenses incurred during the guarantee
+Amount of assessments charged to the non-developer units during the guarantee
+Amount of Developer payments
+Any financial obligation to/from developer as result of the guarantee.
+* Assessment revenue attributed to developer disclosed separately?
+* Detailed schedule of actual to budgeted revenues and expenses of the operating fund?
+* Are CIRA notes included?
+
+Evidence Needed:
+Financial Statement

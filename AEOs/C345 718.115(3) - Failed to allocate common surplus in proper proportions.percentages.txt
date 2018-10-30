@@ -1,0 +1,17 @@
+C345  718.115(3) Failure to allocate common surplus in proper proportions or percentages
+
+NOTE:  Plan can be amended to include multicondominiums by substituting the word multicondominium for condominium.
+
+Allegation:  The association failed to allocate common surplus in proper proportions or percentages, in violation of section 718.115(3), Florida Statutes.
+
+Statute/Rule Reference:  Section 718.115(3), Florida Statutes
+
+Elements:
+
+Was there an allocation of common surplus?
+
+If the condominium was created before January 1, 1996, does the condominium's declaration provide for the proportions or percentages of common elements each unit is to be allocated?  NOTE:  If the declaration of condominium was created after April 1, 1992, the ownership share of the common elements assigned each unit shall be based upon either the total square footage of each unit in relationship to the total square footage of each other residential unit  or on an equal fractional basis.  
+
+If yes, were the units allocated common surplus according to the proportions or percentages of common elements set forth in the declaration?
+
+If the condominium was not created before January 1, 1996, or if the declaration of a condominium created before January 1, 1996, does not provide for the proportions or percentages of common elements of each unit, were the units allocated the same share of the common surplus as the unit's appurtenant ownership interest in the common elements?

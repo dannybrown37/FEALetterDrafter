@@ -1,0 +1,19 @@
+C117 61B-22.0062(2)(a)-(c) Turnover financial statements omit disclosure of common expenses paid by the developer.
+
+Allegation:  The financial statements do not show the common expenses paid by the developer.
+
+Statute/Rule Reference:  Rule 61B-22.0062(2)(a)-(c), FAC
+
+Elements:
+* Is the Audit for the entire period covered?
+* Was a guarantee in place?
+* Are revenues and expenses shown separately for each year?
+* Is there any interim periods that need to be included?
+* Do the notes state that the audit was prepared pursuant to section 718.301(4)(c), FS?
+* Do the books and records show any cash payments made by the developer?
+* If the developer claims that payments were made, but are not reflected, then the amount and purpose of each expenditure shall be stated separately.
+
+Evidence Needed:
+Budgets
+Books and records
+Financial Statements

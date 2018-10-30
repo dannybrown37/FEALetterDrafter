@@ -1,0 +1,15 @@
+C411 718.202(1) or (6) Failure to establish an escrow account or place fund therein
+
+Allegation:  Developer has not properly escrowed contract and/or reservation deposits.
+
+Statute/Rule Reference:  Section 718.201(1) or (6), FS
+
+Elements:
+* Was deposit received pursuant to sales contract or reservation agreement?
+* Was project substantially complete?
+* Was an alternative assurance approved by the Division?
+* Was any type of receipt given to the purchaser?
+
+Evidence Needed:
+Contract or reservation agreement
+Receipts of Deposit

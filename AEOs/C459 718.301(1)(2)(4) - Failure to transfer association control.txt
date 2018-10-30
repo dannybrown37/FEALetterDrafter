@@ -1,0 +1,26 @@
+C459 718.301(1), (2), (4) Failure to transfer association control
+
+Allegation:  Developer has not transferred control as required pursuant to 718.301, FS.
+
+Statute/Rule Reference:  Section 718.201(1), (2), (4) FS
+
+Elements:
+* Do unit owners other than the developer own 15 percent or more of the units that will be operated ultimately by the association?  The unit owners have the right to elect no less than one-third of the member of the board at this time.
+* Unit owners other than the developer are entitled to elect not less than a majority of the members of the board at the first occurrence of the following:
+o Three years after 50 percent of the units that will be operated ultimately by the association have been conveyed to purchasers;
+o Three months after 90 percent of the units that will be operated ultimately by the association have been conveyed to purchasers; 
+o When all units that will be operated ultimately by the association have been completed, some of them have been conveyed to purchasers, and none of the others are being offered for sale in the ordinary course of business;
+o When some of the units have been conveyed to purchasers and none of the others are being constructed or offered for sale in the ordinary course of business; or
+o Seven years after recordation of the declaration of condominium; or seven years after the recordation of the declaration of condominium for the first condominium which is part of a multi-condominium ; or seven years after the recordation of the declaration creating the initial phase of a phase condominium.
+* How many units? The developer is entitled to elect at least one member of the board as long as the developer holds for sale in the ordinary course of business at least five percent, in a condominium with fewer than 500 units, and two percent in a condominium with more than 500 units.
+* Has the association called for an election within 75 days of an occurrence above?
+* Was no less than a 60 day notice given of an election?
+* Was an election performed pursuant to section 718.112(2)(d), FS?
+* Has the developer forwarded to the division the name and address of the first non-developer unit owner which is elected?
+* Did the developer relinquish control and did the unit owners accept control?
+* At the time that the developer relinquished control, or not more than 90 days after, did the developer deliver financial statements to the association?
+
+Evidence Needed:
+Recordation date of the Declaration.
+Financial Statement
+Election meeting notice.

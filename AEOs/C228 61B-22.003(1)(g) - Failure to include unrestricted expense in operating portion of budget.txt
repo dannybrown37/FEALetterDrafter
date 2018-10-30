@@ -1,0 +1,16 @@
+C228 61B-22.003(1)(g) Failure to include unrestricted expense in the operating portion of the budget
+
+Allegation:  Association improperly established reserve fund for unrestricted expenses
+
+Statute/Rule Reference:  Rule 61B-22.003(2), FAC
+
+Elements:
+* Is the reserve component fund restricted for a specific stated purpose?
+* Is the item one for which the deferred maintenance expense or replacement cost exceeds $10,000?
+* If the purpose is for a group of items, are they similar or related assets?
+* Is the deferred maintenance expense for maintenance or repair that will be performed less frequently than yearly, and will result in maintaining the useful life of the asset(s)?
+* Is the capital expenditure for the purchase or replacement of an asset that will extend the useful life of the asset(s) for a period greater than one year?
+
+Evidence Needed:
+Board Meeting minutes when reserve was created and which identified the purpose of the reserve component (if available)
+Reserve ledger (you may need copies of checks)

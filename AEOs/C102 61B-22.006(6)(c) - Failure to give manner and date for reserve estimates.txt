@@ -1,0 +1,16 @@
+C102 61B-22.006(3)(a)5  Failure to disclose manner of reserve estimates and date in the annual financial report.
+
+Allegation:  The financial report did not disclose the date that the estimates for the reserves were last made and did not disclose the manner by which the reserves items were estimated.
+
+Statute/Rule Reference:  Rule 61B-22.006(3)(a)5.,, FS
+
+Elements:
+* Were reserves estimated?
+* Did report include notes?
+* Did notes mention how reserves were estimated? When?
+* Was interest policies stated?
+* Did the notes state if the reserves were to be waived?
+
+Evidence Needed:
+Current financial report
+Previous financial report

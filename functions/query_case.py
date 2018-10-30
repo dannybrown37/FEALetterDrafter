@@ -13,6 +13,13 @@ def amend_table_data(dbm):
     table = menu_choice(prompt, str(range(len(tables)+1)))
     case_number = get_case_number()
 
+    if tables[table-1] == "AppraiserSites":
+        results = dbm.query("SELECT * FROM AppraiserSites")
+        for result in results:
+            print result
+        # TODO add ability to edit these if ever needed
+        return # just breaks from function
+
     while True:
         sql = "SELECT * FROM %s WHERE CaseNumber = %s " % (
             tables[table-1],
@@ -38,4 +45,3 @@ def amend_table_data(dbm):
                 "Enter new data for %s:" % types[update-1]
             )
             dbm.amend_case_data(case_list, update-1)
-        

@@ -1,0 +1,12 @@
+C462 718.301(4)(c) Failure to provide turnover financial statements in a timely manner.
+
+Allegation:  Developer did not turnover the financial statements within 90 days of turnover.
+
+Statute/Rule Reference:  Section 718.301(4)(c), FS
+
+Elements:
+* When did turnover occur?
+* What occurrence triggered turnover?
+
+Evidence Needed:
+Turnover Audit

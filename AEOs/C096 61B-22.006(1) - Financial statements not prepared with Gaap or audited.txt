@@ -1,0 +1,15 @@
+C096 Reporting 61B-22.006(1), FAC.
+
+Allegation 1: The association failed to prepare year-end financial statements in accordance with Generally Accepted Accounting Principles (GAAP) and/or failed to have reviewed or audited year-end financial statements prepared by a Florida licensed CPA in violation of Rule 61B-22.006(1), Florida Administrative Code.  
+
+Statute/Rule Reference: 61B-22.006(1), FAC.
+
+Elements:
+* Have the financial statements been prepared?
+* Are financial statements prepared by a CPA?
+* Is there an auditors report signed by a licensed CPA?
+* Are financial statements prepared according to Generally Accepted Accounting Procedures?
+* Is there a statement in the Auditors report stating that GAAP was used?
+
+Evidence:
+Financial statements

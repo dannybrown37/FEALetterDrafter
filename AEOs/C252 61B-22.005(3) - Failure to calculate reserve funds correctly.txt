@@ -1,0 +1,26 @@
+C252 718.112(2)(f)2. Failure to calculate reserves properly 
+
+Allegation 1: The association failed to calculate reserve funds properly in violation of 718.112(2)(f)2., Florida Statute, and 61B-22.005(3), Florida Administrative Code.
+
+Statute/Rule Reference: 718.112(2)(f)2., FS. / 61B-22.005(3), FAC.
+
+Elements:
+* Have reserves been funded?
+* Is developer in control?
+* Did developer elect to waive Reserves for two years?
+* Are required categories Roof Replacement, Building Painting and Pavement replacement included?
+* Are other expenditures in excess of 10,000 included?
+* Did unit owners by majority vote waive or reduce funding?
+* Are reserves done by pooling?
+* Have reserves been calculated based on a formula that will provide funds equal to the total estimated deferred maintenance expense or total estimated replacement cost for an asset or group of assets? 
+* If reserves are kept separate have the negative balances been funded such that the balance is brought to zero then funded for the estimated remaining life?
+* Have reserve estimates been altered?
+* Are reserves being funded such that the amount collected is the amount spent?
+* Are multiple items being grouped together and an average life span of all items used instead of the life span of each? (Ex. Three separate roofs being averaged at 20 years lifespan instead of 1, 1, and 20.)
+* Are funds being used for other purposes?
+
+Evidence:
+Budget
+Financial Statements
+Estimates
+Billing Statements

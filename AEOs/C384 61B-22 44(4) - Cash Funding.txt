@@ -1,0 +1,18 @@
+C384 - 61B-22.004(4) - Cash Funding 
+
+RULE LANGUAGE
+(4) Cash funding requirements during the guarantee. The cash payments required from the guarantor during the guarantee period shall be determined as follows:
+(a) If at any time during the guarantee period the funds collected from unit owner assessments at the guaranteed level and other revenues collected by the association are not sufficient to provide payment, on a timely basis, of all common expenses, including the full funding of the reserves unless properly waived, the guarantor shall advance sufficient cash to the association at the time such payments are due; and
+(b) Expenses incurred in the production of non-assessment revenues, not in excess of the non-assessment revenues, shall not be included in the common expenses referenced in subsection (5) of this rule. If the expenses attributable to non-assessment revenues exceed non-assessment revenues only the excess expenses must be funded by the guarantor. For example, if the association operates a rental program in which rental expenses exceed rental revenues the guarantor shall fund the rental expenses in excess of the rental revenues. Interest earned on the investment of association funds may be used to pay the income tax expense incurred as a result of the investment, such expense shall not be charged to the guarantor, and the net investment income shall be retained by the association. Each such non-assessment revenue generating activity shall be considered separately. Capital contributions collected from unit owners are not revenues, and shall not be used to pay common expenses.
+
+ELEMENTS
+1. Is there a developer guarantee in place? 
+2. If yes, were the cash payments required from the guarantor during the guarantee period? 
+3. If yes, at any time during the guarantee period were funds collected from unit owner assessments at the guaranteed level and other revenues collected by the association not sufficient to provide payment, on a timely basis, of all common expenses, including the full funding of the reserves unless properly waived?
+4. If yes, did the guarantor advance sufficient cash to the association at the time such payments were due?
+5. If no, why?
+
+NOTE 
+Expenses incurred in the production of non-assessment revenues, not in excess of the non-assessment revenues, shall not be included in the common expenses referenced in subsection (5) of this rule. If the expenses attributable to non-assessment revenues exceed non-assessment revenues only the excess expenses must be funded by the guarantor. For example, if the association operates a rental program in which rental expenses exceed rental revenues the guarantor shall fund the rental expenses in excess of the rental revenues. Interest earned on the investment of association funds may be used to pay the income tax expense incurred as a result of the investment, such expense shall not be charged to the guarantor, and the net investment income shall be retained by the association. Capital contributions collected from unit owners are not revenues, and shall not be used to pay common expenses.
+
+6. Was each such non-assessment revenue generating activity considered separately?
