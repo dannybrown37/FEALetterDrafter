@@ -35,14 +35,12 @@ class DatabaseManager(object):
         self.connection.commit()
 
     def insert_appraiser_website(self, county, website):
-        # Won't really be used once we've populated this data
-        sql = """ INSERT INTO AppraiserSites VALUES (?, ?) """
-        county_website = [county, website]
-        self.cursor.execute(sql, county_website)
+        # Won't likely be used once we've populated this data
+        sql = """ INSERT INTO AppraiserSites
+                  VALUES (?, ?) """
+        self.cursor.execute(sql, [county, website])
         self.connection.commit()
         results = self.query('SELECT * From AppraiserSites')
-        for result in results:
-            print result
 
     def query_important_date(self, date_type, case_number):
         # returns a specific date from a specific case as specified

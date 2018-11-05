@@ -13,14 +13,15 @@ def main():
         # Chooseth the thing to doeth
         prompt = ("1. Draft a letter.\n"
                   "2. Update case data.\n"
-                  "3. Query and update any table in the database.\n"
+                  "3. Query data and update any table in the database.\n"
                   "4. Get assistance with an initial review.\n"
                   "5. Create an AEO.\n"
-                  "Q. (Exit the program.)")
+                  "Q. (Exit the program.)\n")
         choice = menu_choice(prompt, "12345Qq")
 
         # Do the thing
         dbm = DatabaseManager("fea_case_data.db")
+        #dbm.delete_case_data(2108056213)
         if choice is 1:
             cdm = CaseDataManager(dbm)
             CorrespondenceManager(dbm, cdm)
@@ -33,7 +34,7 @@ def main():
             ReviewManager(dbm, cdm)
         elif choice is 5:
             AEOManager()
-        elif choice == "Q".lower():
+        elif choice.lower() == "q":
             exit()
 
 if __name__ == '__main__':

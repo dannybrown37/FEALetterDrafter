@@ -1,4 +1,5 @@
 import glob
+import subprocess
 import docx
 from functions.validate import get_string, get_case_number
 
@@ -49,6 +50,7 @@ class AEOManager(object):
             select = get_string(prompt)
         else:
             print "Not found!"
+            select = ""
             self.add_allegations()
         try:
             select = int(select)
@@ -98,5 +100,8 @@ class AEOManager(object):
             doc_data.append(self.allegations[num].split(" ")[0])
 
         doc_data = " ".join(doc_data)
+        doc_name = " %s AEO %s.docx" % (doc_data, self.case_number)
 
-        document.save(" %s AEO %s.docx" % (doc_data, self.case_number))
+        document.save(doc_name)
+        # Open the new document to remind to index
+        subprocess.Popen([doc_name], shell=True)

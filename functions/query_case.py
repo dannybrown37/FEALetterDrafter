@@ -44,4 +44,5 @@ def amend_table_data(dbm):
             case_list[update-1] = get_string(
                 "Enter new data for %s:" % types[update-1]
             )
+            case_list[update-1] = int(case_list[update-1])
             dbm.amend_case_data(case_list, update-1)
