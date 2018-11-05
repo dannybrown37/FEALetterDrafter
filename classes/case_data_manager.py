@@ -65,9 +65,12 @@ class CaseDataManager(object):
             # START HELPER FUNCTIONS #
             # THESE FUNCTIONS CHECK FOR MATCHING EXISITING DATA FROM OTHER ROWS
         def check_for_respondent():
-            sql = "SELECT %s FROM CaseData WHERE Respondent = %s LIMIT 1" % (
+            sql = '''SELECT %s
+                     FROM CaseData
+                     WHERE Respondent = "%s"
+                     LIMIT 1''' % (
                 "Respondent, Project, RespAddress, RespContact, RespCity, "
-                "RespState, RespZip, RespEmail", "'" + self.resp_name + "'"
+                "RespState, RespZip, RespEmail", self.resp_name
             )
             resp = self.dbm.query(sql)
             self.resp_list = []
@@ -76,10 +79,12 @@ class CaseDataManager(object):
                     self.resp_list.append(item)
 
         def check_for_complainant():
-            sql = "SELECT %s FROM CaseData WHERE CompName = %s LIMIT 1" % (
-                "CompName, CompTitle, CompFirst, CompLast, CompAddress, "
-                "CompCity, CompState, CompZip, CompEmail",
-                "'" + self.comp_name + "'"
+            sql = '''SELECT %s
+                     FROM CaseData
+                     WHERE CompName = "%s"
+                     LIMIT 1''' % (
+               "CompName, CompTitle, CompFirst, CompLast, CompAddress, "
+               "CompCity, CompState, CompZip, CompEmail", self.comp_name
             )
             comp = self.dbm.query(sql)
             self.comp_list = []

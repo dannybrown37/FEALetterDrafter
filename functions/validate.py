@@ -75,12 +75,12 @@ def get_due_date(letter_type):
 def zip_find(recipient_type):
     code = get_string("Enter the " + recipient_type + "'s mailing zip code.")
     code = ''.join(char for char in code if char.isdigit())
-    search = uszipcode.ZipcodeSearchEngine()
-    myzip = search.by_zipcode(code)
-    if not myzip:
+    search = uszipcode.SearchEngine()
+    data = search.by_zipcode(code)
+    if not data:
         return get_string("Manually enter the city, state, and zip code.")
     else:
-        return myzip.City + ", " + myzip.State + " " + code
+        return data.city + ", " + data.state + " " + code
 
 
 def menu_choice(prompt, acceptable):
