@@ -16,12 +16,12 @@ def main():
                   "3. Query data and update any table in the database.\n"
                   "4. Get assistance with an initial review.\n"
                   "5. Create an AEO.\n"
+                  "6. Delete case data from the database.\n"
                   "Q. (Exit the program.)\n")
-        choice = menu_choice(prompt, "12345Qq")
+        choice = menu_choice(prompt, "123456Qq")
 
         # Do the thing
         dbm = DatabaseManager("fea_case_data.db")
-        #dbm.delete_case_data(2108056213)
         if choice is 1:
             cdm = CaseDataManager(dbm)
             CorrespondenceManager(dbm, cdm)
@@ -34,6 +34,8 @@ def main():
             ReviewManager(dbm, cdm)
         elif choice is 5:
             AEOManager()
+        elif choice is 6:
+            dbm.delete_case_data()
         elif choice.lower() == "q":
             exit()
 
@@ -42,8 +44,6 @@ if __name__ == '__main__':
 
 """
 # Useful stuff to copy/paste
-
-dbm.delete_case_data(2018021031)
 
 dummy = [2018021031, "RESP", "PROJ", "RESPADDRESS", "RESPCONTACT", "RESPCITY",
         "RESPSTATE", 32048, "RESPEMAIL", "COMPNAME", "COMPTITLE", "COMPFIRST",
@@ -61,26 +61,4 @@ dbm.create_table("LetterTypes")
 
 dbm.drop_table("AppraiserSites")
 dbm.create_table("AppraiserSites")
-
-results = dbm.query('select * from CaseData')
-for result in results:
-    print result
-results = dbm.query('select * from ImportantDates')
-for result in results:
-    print result
-results = dbm.query('select * from LetterTypes')
-for result in results:
-    print result
-
-results = dbm.query('select * from casedata where CaseNumber = 2018021031')
-for result in results:
-    print result
-
-results = dbm.query('select * from importantdates where CaseNumber = 2018021031')
-for result in results:
-    print result
-
-
-cd.print_case_data()
-
 """

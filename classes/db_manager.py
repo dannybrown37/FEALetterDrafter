@@ -1,4 +1,5 @@
 import sqlite3
+from functions.validate import get_case_number
 
 
 class DatabaseManager(object):
@@ -65,11 +66,26 @@ class DatabaseManager(object):
         )
         self.query(sql)
 
-    def delete_case_data(self, case_number):
+    def delete_case_data(self):
         # deletes a row with matching case number
-        # to use, call with obj.delete_case_data(case_number)
-        sql = """ DELETE FROM CaseData WHERE CaseNumber = ? """
-        self.cursor.execute(sql, (case_number,)) # self.query doesn't work here
+        print "\nYou've chosen to delete case data!"
+        case = get_case_number()
+
+        # Verify the table actually exists
+        q = self.query("SELECT * FROM CaseData WHERE CaseNumber = %s" % case)
+        count = []
+        for row in q:
+            for item in row:
+                count.append(item)
+        if len(count) is 0:
+            print "\nThe table does not exist!"
+            return # Go back to main if the case does not exist
+
+        # If the case exists, we can delete all the rows associated with it
+        tables = ['CaseData', 'ImportantDates', 'LetterTypes']
+        for table_name in tables: # self.query doesn't work here because of ?
+            sql = """ DELETE FROM %s WHERE CaseNumber = ? """ % table_name
+            self.cursor.execute(sql, (case_number,))
         self.connection.commit()
 
     def get_column_names(self):
