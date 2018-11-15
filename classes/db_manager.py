@@ -85,7 +85,7 @@ class DatabaseManager(object):
         tables = ['CaseData', 'ImportantDates', 'LetterTypes']
         for table_name in tables: # self.query doesn't work here because of ?
             sql = """ DELETE FROM %s WHERE CaseNumber = ? """ % table_name
-            self.cursor.execute(sql, (case_number,))
+            self.cursor.execute(sql, (case,))
         self.connection.commit()
 
     def get_column_names(self):
