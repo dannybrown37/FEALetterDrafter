@@ -80,10 +80,10 @@ class CorrespondenceManager(object):
                 dueDateWarning = self.due_date_wl,
                 dateOfCTC = self.date_of_ctc,
                 ILCallDate = self.il_call_date,
-                # Need to do (approximate) date of letter sending
-                # TODO dateOfCCCL,
-                # TODO dateOfACKC,
-                # TODO dateOfWL,
+                # Date of particular letters being sent
+                dateOfCCCL = self.cccl_date,
+                dateOfACKC = self.ackc_date,
+                dateOfWL = self.wl_date
             )
             output_absolute_path = os.path.join(
                 script_dir,
@@ -170,7 +170,7 @@ class CorrespondenceManager(object):
 
         # Info for complainant letters
         if "compPhone" in self.merge_fields:
-            prompt = "What phone number did you try for complainant?"
+            prompt = "What phone number did you try to reach complainant at?"
             self.comp_phone = get_string(prompt)
         else:
             self.comp_phone = None
@@ -197,6 +197,22 @@ class CorrespondenceManager(object):
         else:
             self.il_call_date = None
 
+        # Dates of letters referenced in other letters
+        if "dateOfCCCL" in self.merge_fields:
+            self.cccl_date = get_string("What was the date of CCCL?")
+        else:
+            self.cccl_date = None
+
+        if "dateOfACKC" in self.merge_fields:
+            self.ackc_date = get_string("What was the date of ACKC?")
+        else:
+            self.ackc_date = None
+
+        if "dateOfWL" in self.merge_fields:
+            self.wl_date = get_string("What was the date of WL?")
+        else:
+            self.wl_date = None
+
         # Self-filling allegations/evidence get their own sub-sections
         self.allegations = None
         self.evidence = None
@@ -220,7 +236,7 @@ class CorrespondenceManager(object):
         master_list = []
         for file_name in glob.glob("letter_templates/*.docx"):
             with MailMerge(file_name) as document:
-                merge_fields = list(document.get_merge_fields()) # COOL FUNCTION
+                merge_fields = list(document.get_merge_fields()) # COOL METHOD
                 for mf in merge_fields:
                     if mf not in master_list:
                         master_list.append(mf)

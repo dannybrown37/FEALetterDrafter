@@ -12,7 +12,6 @@ class DatabaseManager(object):
         self.cursor.execute(sql)
         self.connection.commit()
         return self.cursor
-        # to print results, assign return to var and then use a for loop
 
     def __del__(self):
         self.connection.close()
@@ -36,7 +35,8 @@ class DatabaseManager(object):
         self.connection.commit()
 
     def insert_appraiser_website(self, county, website):
-        # Won't likely be used once we've populated this data
+        # Won't likely be used once we've populated this data,
+        # but saving the function should we ever need to repopulate the database
         sql = """ INSERT INTO AppraiserSites
                   VALUES (?, ?) """
         self.cursor.execute(sql, [county, website])

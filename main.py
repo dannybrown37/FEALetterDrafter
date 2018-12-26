@@ -6,35 +6,47 @@ from classes.review_manager import ReviewManager
 from classes.aeo_manager import AEOManager
 from functions.validate import menu_choice
 from functions.query_case import amend_table_data
+from functions.query_table import query_entire_table
 
 
 def main():
     while True:
         # Chooseth the thing to doeth
         prompt = ("1. Draft a letter.\n"
-                  "2. Update case data.\n"
-                  "3. Query data and update any table in the database.\n"
-                  "4. Get assistance with an initial review.\n"
-                  "5. Create an AEO.\n"
-                  "6. Delete case data from the database.\n"
+                  "2. Get assistance with an initial review.\n"
+                  "3. Create an AEO.\n"
+                  "4. Create a Consent Order.\n"
+                  "\n"
+                  "Database Maintenance Options\n"
+                  "5. Update case data.\n"
+                  "6. Query and update data in any table in the database.\n"
+                  "7. Query an entire table and print the results.\n"
+                  "8. Delete case data from the database.\n"
+                  "\n"
                   "Q. (Exit the program.)\n")
-        choice = menu_choice(prompt, "123456Qq")
+        choice = menu_choice(prompt, "1234567Qq")
 
         # Do the thing
         dbm = DatabaseManager("fea_case_data.db")
+
         if choice is 1:
             cdm = CaseDataManager(dbm)
             CorrespondenceManager(dbm, cdm)
         elif choice is 2:
-            CaseDataManager(dbm)
-        elif choice is 3:
-            amend_table_data(dbm)
-        elif choice is 4:
             cdm = CaseDataManager(dbm)
             ReviewManager(dbm, cdm)
-        elif choice is 5:
+        elif choice is 3:
             AEOManager()
+        elif choice is 4:
+            pass
+            # TODO consent order manager needed
+        elif choice is 5:
+            CaseDataManager(dbm)
         elif choice is 6:
+            amend_table_data(dbm)
+        elif choice is 7:
+            query_entire_table(dbm)
+        elif choice is 8:
             dbm.delete_case_data()
         elif choice.lower() == "q":
             exit()
