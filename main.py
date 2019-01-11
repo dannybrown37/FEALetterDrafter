@@ -4,6 +4,7 @@ from classes.case_data_manager import CaseDataManager
 from classes.correspondence_manager import CorrespondenceManager
 from classes.review_manager import ReviewManager
 from classes.aeo_manager import AEOManager
+from classes.co_manager import ConsentOrderManager
 from functions.validate import menu_choice
 from functions.query_case import amend_table_data
 from functions.query_table import query_entire_table
@@ -38,8 +39,8 @@ def main():
         elif choice is 3:
             AEOManager()
         elif choice is 4:
-            pass
-            # TODO consent order manager needed
+            cdm = CaseDataManager(dbm)
+            ConsentOrderManager(dbm, cdm)
         elif choice is 5:
             CaseDataManager(dbm)
         elif choice is 6:
