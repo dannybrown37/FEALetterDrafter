@@ -5,6 +5,7 @@ from classes.correspondence_manager import CorrespondenceManager
 from classes.review_manager import ReviewManager
 from classes.aeo_manager import AEOManager
 from classes.co_manager import ConsentOrderManager
+from classes.closing_manager import ClosingManager
 from functions.validate import menu_choice
 from functions.query_case import amend_table_data
 from functions.query_table import query_entire_table
@@ -17,12 +18,13 @@ def main():
                   "2. Get assistance with an initial review.\n"
                   "3. Create an AEO.\n"
                   "4. Create a Consent Order.\n"
+                  "5. Get assistance with case closing.\n"
                   "\n"
                   "Database Maintenance Options\n"
-                  "5. Update case data.\n"
-                  "6. Query and update data in any table in the database.\n"
-                  "7. Query an entire table and print the results.\n"
-                  "8. Delete case data from the database.\n"
+                  "6. Update case data.\n"
+                  "7. Query and update data in any table in the database.\n"
+                  "8. Query an entire table and print the results.\n"
+                  "9. Delete case data from the database.\n"
                   "\n"
                   "Q. (Exit the program.)\n")
         choice = menu_choice(prompt, "1234567Qq")
@@ -42,12 +44,15 @@ def main():
             cdm = CaseDataManager(dbm)
             ConsentOrderManager(dbm, cdm)
         elif choice is 5:
-            CaseDataManager(dbm)
+            cdm = CaseDataManager(dbm)
+            ClosingManager(dbm, cdm)
         elif choice is 6:
-            amend_table_data(dbm)
+            CaseDataManager(dbm)
         elif choice is 7:
-            query_entire_table(dbm)
+            amend_table_data(dbm)
         elif choice is 8:
+            query_entire_table(dbm)
+        elif choice is 9:
             dbm.delete_case_data()
         elif choice.lower() == "q":
             exit()
