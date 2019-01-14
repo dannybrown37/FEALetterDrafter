@@ -1,7 +1,10 @@
 from .aeo_manager import AEOManager
 import os
+import datetime
 import webbrowser as wb
 import uszipcode
+import subprocess
+import mailmerge
 import subprocess
 from shutil import copy2
 from uszipcode import SearchEngine
@@ -17,10 +20,7 @@ class ReviewManager(object):
         self.get_ownership_info()
         self.generate_summary()
         AEOManager(self.cdm.case_list)
-        checklist_pdf = 'checklists/2018 Case Opening Checklist.pdf'
-        copy = '%s Case Opening Checklist.pdf' % cdm.case_list[0]
-        copy2(checklist_pdf, copy)
-        subprocess.Popen([copy], shell=True)
+        self.generate_initial_checklist()
         # TODO add dialogue box on where to save? Figure out how to handle these
 
     def get_corporate_info(self):
@@ -83,6 +83,43 @@ class ReviewManager(object):
         print ("\n[complainant is %s, project is %s, %s units, fees %s,"
                " corp status %s]") % (self.owner, self.project_type,
                         self.num_of_units, self.fees_paid, self.corp_status)
+
+    def generate_initial_checklist(self):
+        wait = get_string( # this doesn't do anything; just a reminder
+            "Press enter to confirm allegations are entered in Versa."
+        )
+        # This is where we actually generate our checklist
+        self.file_name = "checklists/2018 Case Opening Checklist.docx"
+
+        merge_dict = { # These are the ones we know
+            "Respondent" : self.cdm.case_list[1],
+            "CaseNumber" : str(self.cdm.case_list[0]),
+        }
+
+        # Then we collect other data from the user
+        merge_dict["DateReceived"] = get_string(
+            "What was the date of receipt for the complaint? "
+        )
+        merge_dict["DateAssigned"] = get_string(
+            "What was the date case was assigned to investigator?"
+        )
+        date = datetime.datetime.today().strftime('%m-%d-%Y')
+        initials = get_string("What are your initials? ")
+        merge_dict["InitialsAndDate"] = "%s %s" % (initials, date)
+
+        # We've got our data, let's generate the document
+        script_dir = os.path.dirname("main.py")
+        absolute_path = os.path.join(script_dir, self.file_name)
+        document = mailmerge.MailMerge(absolute_path)
+        document.merge(**merge_dict)
+        output_path = os.path.join(
+            script_dir,
+            "%s Initial Checklist.docx" % self.cdm.case_list[0]
+        )
+        document.write(output_path)
+
+        # Open the new document to remind to index
+        subprocess.Popen([output_path], shell=True)
 
 
     ##################################### Helper functions

@@ -15,10 +15,8 @@ class CorrespondenceManager(object):
     def __init__(self, dbm, cdm):
         self.dbm = dbm
         self.cdm = cdm
-        self.dbm.query("SELECT * FROM CaseData") # needed for next line
-        self.case_data_categories = self.dbm.get_column_names()
-        self.dbm.query("SELECT * FROM LetterTypes") # needed for next line
-        self.letter_types = self.dbm.get_column_names()
+        self.case_data_categories = self.dbm.get_column_names("CaseData")
+        self.letter_types = self.dbm.get_column_names("LetterTypes")
         self.letter_types.pop(0) # remove the CaseNumber column
         self.to_gen = []
         # populate values in to_gen for letters to create

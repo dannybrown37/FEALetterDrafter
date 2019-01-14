@@ -40,8 +40,7 @@ class CaseDataManager(object):
     def update_case_data(self):
         # allows user the chance to update selected case data
         # called by __init__ if case number is exisiting in database
-        self.dbm.query("SELECT * FROM CaseData") # needed for next line
-        column_names = self.dbm.get_column_names()
+        column_names = self.dbm.get_column_names("CaseData")
         while True:
             print "\n 0. Nothing more to update!"
             self.print_case_data(column_names)

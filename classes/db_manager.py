@@ -58,7 +58,7 @@ class DatabaseManager(object):
         self.query(sql)
 
     def amend_case_data(self, case_list, index):
-        column_names = self.get_column_names()
+        column_names = self.get_column_names("CaseData")
         print column_names[index]
         print case_list[index]
         sql = "UPDATE CaseData SET %s = '%s' WHERE %s = %s" % (
@@ -88,7 +88,9 @@ class DatabaseManager(object):
             self.cursor.execute(sql, (case,))
         self.connection.commit()
 
-    def get_column_names(self):
+    def get_column_names(self, table=""):
+        if table:
+            self.query("SELECT * FROM %s" % table)
         return [description[0] for description in self.cursor.description]
 
     def drop_table(self, table_name):

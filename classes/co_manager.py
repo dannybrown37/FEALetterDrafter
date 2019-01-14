@@ -46,7 +46,7 @@ class ConsentOrderManager(object):
         document.merge(**self.merge_dict)
         output_path = os.path.join(
             script_dir,
-            "{} Consent Order".format(self.cdm.case_list[0])
+            "{} Consent Order.docx".format(self.cdm.case_list[0])
         )
         document.write(output_path)
         print "\nYour administrative action has been generated!"
