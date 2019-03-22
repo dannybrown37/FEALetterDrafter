@@ -16,10 +16,27 @@ def get_bool(prompt):
     while q not in acceptable or q is "":
         print "\nThat's not an acceptable response. Please try again. "
         q = raw_input(prompt + "\n> ")
-    if q == "no" or q == "false" or q == "0" or q == "n":
+    if q in ['no', '0', 'false', 'n']:
         return False
-    elif q == "yes" or q == "true" or q == "1" or q == "y":
+    elif q in ['yes', '1', 'true', 'y']:
         return True
+
+def get_bool_or_na(prompt):
+    q = raw_input("\n" + prompt + "\n> ").lower()
+    acceptable = [
+        'yes', '1', 'true', 'y',
+        'no', '0', 'false', 'n',
+        'n/a', 'na', 'not applicable', 'n.a.'
+    ]
+    while q not in acceptable or q is "":
+        print "\nThat's not an acceptable response. Please try again. "
+        q = raw_input("\n" + prompt + "\n> ")
+    if q in ['no', '0', 'false', 'n']:
+        return False
+    elif q in ['yes', '1', 'true', 'y']:
+        return True
+    elif q in ['n/a', 'na', 'not applicable', 'n.a.']:
+        return "N/A"
 
 
 def get_integer(prompt):

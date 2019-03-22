@@ -33,7 +33,6 @@ class ClosingManager(object):
         )
 
         # We can operate logic on whether PSTUs should have been completed
-
         opened = dateparser.parse(self.merge_dict["DateCaseOpened"])
         today = datetime.datetime.today()
         num_days = today - opened
@@ -48,6 +47,10 @@ class ClosingManager(object):
                 self.merge_dict["%sDayPSTU" % x] = None
 
     def generate_closing_checklist(self):
+        wait = get_string( # this doesn't do anything; just a reminder
+            "Press enter to confirm allegation dispositions are entered "
+            "in Versa."
+        )
         script_dir = os.path.dirname("main.py")
         absolute_path = os.path.join(script_dir, self.file_name)
         document = mailmerge.MailMerge(absolute_path)

@@ -6,12 +6,15 @@ from classes.review_manager import ReviewManager
 from classes.aeo_manager import AEOManager
 from classes.co_manager import ConsentOrderManager
 from classes.closing_manager import ClosingManager
+from classes.annual_financials_review_manager import AFReviewManager
 from functions.validate import menu_choice
 from functions.query_case import amend_table_data
 from functions.query_table import query_entire_table
 
 
 def main():
+
+    AFReviewManager()
     while True:
         # Chooseth the thing to doeth
         prompt = ("1. Draft a letter.\n"

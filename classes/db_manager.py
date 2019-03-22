@@ -28,7 +28,7 @@ class DatabaseManager(object):
         self.cursor.execute(sql, case_number_in_list)
         sql = """ INSERT INTO LetterTypes
                   VALUES (
-                      ? , NULL, NULL, NULL, NULL, NULL, NULL, NULL,
+                      ? , NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL,
                       NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL
                   ) """
         self.cursor.execute(sql, case_number_in_list)
@@ -177,6 +177,7 @@ class DatabaseManager(object):
                         ClosingRespViolation TEXT,
                         ClosingCompNoViolation TEXT,
                         ClosingRespNoViolation TEXT,
+                        ClosingMemoNoViolation TEXT,
                         PSTU TEXT
                     )
                     """
