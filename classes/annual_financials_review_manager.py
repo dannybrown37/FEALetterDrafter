@@ -173,7 +173,7 @@ class AFReviewManager(object): # AnnualFinancials
         )
 
         self.review_results["special_assessments"] = get_bool_or_na(
-            "The specific purpose or purposes of any special assessments to\n"
+            "The specific purpose or purposes of any special assessments\n"
             "to unit owners pursuant to Section 718.116(10), F.S., and the\n"
             "amount of each special assessment and the disposition of the\n"
             "funds collected."
