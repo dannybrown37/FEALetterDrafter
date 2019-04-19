@@ -17,20 +17,14 @@ def main():
 
     while True:
         # Chooseth the thing to doeth
-        prompt = (" 1. Draft a letter.\n"
-                  " 2. Draft a Consent Order (and related documents).\n"
-                  " 3. Create an AEO.\n"
-                  " 4. Get assistance with an initial review.\n"
-                  " 5. Get assistance with case closing procedures.\n"
-                  " 6. Get assistance reviewing annual financials.\n"
-                  " 7. Get assistance reviewing a budget and reserve schedule."
+        prompt = ("1. Draft a letter.\n"
+                  "2. Draft a Consent Order (and related documents).\n"
+                  "3. Create an AEO.\n"
+                  "4. Get assistance with an initial review.\n"
+                  "5. Get assistance with case closing procedures.\n"
+                  "6. Get assistance reviewing annual financials.\n"
+                  "7. Get assistance reviewing a budget and reserve schedule."
                   "\n\n"
-                  "Database Maintenance Options\n"
-                  " 8. Update case data.\n"
-                  " 9. Query and update data in any table in the database.\n"
-                  "10. Query an entire table and print the results.\n"
-                  "11. Delete case data from the database.\n"
-                  "\n"
                   "Q. (Exit the program.)\n")
         choice = menu_choice(prompt, "1234567Qq")
 
@@ -55,16 +49,9 @@ def main():
             AFReviewManager()
         elif choice is 7:
             BudgetReviewManager()
-        elif choice is 8:
-            CaseDataManager(dbm)
-        elif choice is 9:
-            amend_table_data(dbm)
-        elif choice == 10:
-            query_entire_table(dbm)
-        elif choice == 11:
-            dbm.delete_case_data()
         elif choice.lower() == "q":
             exit()
+
 
 if __name__ == '__main__':
     main()
@@ -88,4 +75,25 @@ dbm.create_table("LetterTypes")
 
 dbm.drop_table("AppraiserSites")
 dbm.create_table("AppraiserSites")
+"""
+
+"""
+# May want to bring these back at some point? Not always relevant
+"Database Maintenance Options\n"
+" 8. Update case data.\n"
+" 9. Query and update data in any table in the database.\n"
+"10. Query an entire table and print the results.\n"
+"11. Delete case data from the database.\n"
+"\n"
+"""
+
+"""
+elif choice is 8:
+    CaseDataManager(dbm)
+elif choice is 9:
+    amend_table_data(dbm)
+elif choice == 10:
+    query_entire_table(dbm)
+elif choice == 11:
+    dbm.delete_case_data()
 """
